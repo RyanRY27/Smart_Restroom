@@ -122,36 +122,34 @@
                 contentArea.classList.remove('collapsed');
             }
 
-        const texts = document.getElementsByClassName('item-text');
-        for (let text of texts) {
-            text.style.opacity = sidebarState === 'collapsed' ? '0' : '1';
-            text.style.width = sidebarState === 'collapsed' ? '0' : 'auto';
+            const texts = document.getElementsByClassName('item-text');
+            for (let text of texts) {
+                text.style.opacity = sidebarState === 'collapsed' ? '0' : '1';
+                text.style.width = sidebarState === 'collapsed' ? '0' : 'auto';
+            }
         }
-    }
-
-    // Call the restoreSidebarState function on page load
         document.addEventListener('DOMContentLoaded', restoreSidebarState);
 
         $(document).ready(function () {
-            // Retrieve the saved active item from localStorage
+            
             const activeLink = localStorage.getItem('activeLink');
             if (activeLink) {
                 $('.list-group-item').removeClass('active');
                 $('#' + activeLink).addClass('active');
             }
 
-            // Add 'click' event listener to all sidebar items
+          
             $('.list-group-item').click(function () {
-                // Remove 'active' class from all items
+             
                 $('.list-group-item').removeClass('active');
 
-                // Add 'active' class to the clicked item
+            
                 $(this).addClass('active');
 
-                // Save the clicked item's ID in localStorage
+               
                 localStorage.setItem('activeLink', this.id);
 
-                // Optional: Log the active item for debugging purposes
+              
                 console.log($(this).text() + " is active now");
             });
         });

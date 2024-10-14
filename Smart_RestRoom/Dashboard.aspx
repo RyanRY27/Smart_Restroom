@@ -9,7 +9,7 @@
                 <div class="container-fluid px-0">
                     <div class="row g-2">
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card h-100" style="border-radius: 10px; background-color: #EFEFEF;">
+                            <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
                                 <div class="card-body">
                                     <h5 class="card-title">Content 1</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card h-100" style="border-radius: 10px; background-color: #EFEFEF;">
+                            <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
                                 <div class="card-body">
                                     <h5 class="card-title">Content 2</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card h-100" style="border-radius: 10px; background-color: #EFEFEF;">
+                            <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
                                 <div class="card-body">
                                     <h5 class="card-title">Content 3</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -36,7 +36,7 @@
 
                     <div class="row g-2 mt-1">
                         <div class="col-12">
-                            <div class="card" style="border-radius: 10px; height: 600px; background-color: #EFEFEF;">
+                            <div class="card" style="border-radius: 20px; height: 600px; background-color: #EFEFEF;">
                                 <div class="card-body">
                                     <h5 class="card-title">Content 4</h5>
                                     <p class="card-text">This card spans the entire width of the dashboard, filling up any available space.</p>
