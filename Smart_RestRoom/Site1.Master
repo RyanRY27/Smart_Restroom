@@ -26,27 +26,28 @@
             margin-bottom: 10px;
         }
 
-        #sidebar .list-group-item:hover {
-            background-color: #D7D7D7;
-            color: #1D1D1D;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-            padding-left: 15px;
-            padding-right: 15px;
-            width: 90%;
-            margin-left: 5%;
-        }
-     
-        #sidebar .list-group-item.active {
-            background-color: #D1D9FF;
-            color: #1D1D1D;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-            padding-left: 15px;
-            padding-right: 15px;
-            width: 90%;
-            margin-left: 5%;
-        }
+            #sidebar .list-group-item:hover {
+                background-color: #D7D7D7;
+                color: #1D1D1D;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 90%;
+                margin-left: 5%;
+            }
+
+            #sidebar .list-group-item.active {
+                background-color: #D1D9FF;
+                color: #1D1D1D;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 90%;
+                margin-left: 5%;
+            }
+
         .dropdown-item {
             background-color: #EFEFEF;
             transition: all 0.3s ease;
@@ -55,35 +56,55 @@
             color: black;
         }
 
-        .dropdown-item:hover {
-            background-color: #D1D9FF;
-            color: #1D1D1D;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
+            .dropdown-item:hover {
+                background-color: #D7D7D7;
+                color: #1D1D1D;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 90%;
+                margin-left: 5%;
+            }
+
+        .nav-item .dropdown-item {
+            background-color: #EFEFEF;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 10px;
+            color: black;
+            transform: scale(1); 
         }
 
+            .nav-item .dropdown-item:hover {
+                background-color: #D7D7D7;
+                color: #1D1D1D;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transform: scale(1.1); 
+            }
+
         #content-area {
-            margin-left: 250px; 
-            padding: 20px; 
-            padding-top: 100px; 
+            margin-left: 250px;
+            padding: 20px;
+            padding-top: 100px;
             transition: margin-left 0.3s ease;
-            min-height: calc(100vh - 60px); 
+            min-height: calc(100vh - 60px);
         }
 
         @media (max-width: 768px) {
             #content-area {
-                margin-left: 250px; 
+                margin-left: 250px;
                 padding-top: 80px;
             }
 
             #sidebar {
-                width: 250px; 
+                width: 250px;
                 top: 60px;
             }
         }
 
         #content-area.collapsed {
-            margin-left: 70px; 
+            margin-left: 70px;
         }
     </style>
 
@@ -99,7 +120,7 @@
                 localStorage.setItem('sidebarState', 'expanded');
             } else {
                 sidebar.style.width = '70px';
-                contentArea.classList.add('collapsed'); 
+                contentArea.classList.add('collapsed');
                 localStorage.setItem('sidebarState', 'collapsed');
             }
 
@@ -131,25 +152,25 @@
         document.addEventListener('DOMContentLoaded', restoreSidebarState);
 
         $(document).ready(function () {
-            
+
             const activeLink = localStorage.getItem('activeLink');
             if (activeLink) {
                 $('.list-group-item').removeClass('active');
                 $('#' + activeLink).addClass('active');
             }
 
-          
+
             $('.list-group-item').click(function () {
-             
+
                 $('.list-group-item').removeClass('active');
 
-            
+
                 $(this).addClass('active');
 
-               
+
                 localStorage.setItem('activeLink', this.id);
 
-              
+
                 console.log($(this).text() + " is active now");
             });
         });
@@ -157,7 +178,7 @@
     </script>
 
 
-    
+
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
 </head>
@@ -169,8 +190,8 @@
                     <a class="navbar-brand ms-4 d-flex align-items-center" href="#" style="color: black; font-size: 24px;" onclick="toggleSidebar()">
                         <i class="fa-solid fa-bars"></i>
                     </a>
-                    <h1 class="navbar-brand d-flex align-items-center" style="color: black; font-size: 30px; font-weight:bold; margin-right: auto; line-height: 60px;">
-                        <i class="fa-solid fa-restroom ms-1 me-2"></i> SMART RESTROOM
+                    <h1 class="navbar-brand d-flex align-items-center" style="color: black; font-size: 30px; font-weight: bold; margin-right: auto; line-height: 60px;">
+                        <i class="fa-solid fa-restroom ms-1 me-2"></i>SMART RESTROOM
                     </h1>
                     <div class="nav-item dropdown me-4">
                         <a class="nav-link" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black; font-size: 24px;">
@@ -178,8 +199,10 @@
                             <span class="badge bg-danger" style="position: absolute; top: 10px; right: 10px; font-size: 12px;">3</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="notificationDropdown" style="padding: 15px; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 350px; max-width: 100%; white-space: normal;">
-                            <li class="dropdown-header" style="color:black; font-weight: bold; font-size: 24px">Notifications<i class="fa-solid fa-bell ms-2"></i></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-header" style="color: black; font-weight: bold; font-size: 24px">Notifications<i class="fa-solid fa-bell ms-2"></i></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li>
                                 <a class="dropdown-item" href="#">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -191,11 +214,13 @@
                                             <br />
                                             <small class="text-muted">5 minutes ago</small>
                                         </div>
-                                        <span class="badge bg-danger" style="font-size: 12px;">1</span> 
+                                        <span class="badge bg-danger" style="font-size: 12px;">1</span>
                                     </div>
                                 </a>
                             </li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li>
                                 <a class="dropdown-item" href="#">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -207,11 +232,13 @@
                                             <br />
                                             <small class="text-muted">10 minutes ago</small>
                                         </div>
-                                        <span class="badge bg-danger" style="font-size: 12px;">1</span> 
+                                        <span class="badge bg-danger" style="font-size: 12px;">1</span>
                                     </div>
                                 </a>
                             </li>
-                            <li><hr class="dropdown-divider" style="border-color: #BFBFBF;"></li>
+                            <li>
+                                <hr class="dropdown-divider" style="border-color: #BFBFBF;">
+                            </li>
                             <li class="text-center">
                                 <a class="dropdown-item" href="#">View All</a>
                             </li>
@@ -228,7 +255,7 @@
                             <li style="margin-bottom: 20px;">
                                 <h3 style="margin: 10px 0; font-size: 1.2rem; color: #333;">Hi, User!</h3>
                             </li>
-                            <li style="text-align:left; margin-bottom: 30px;">
+                            <li style="text-align: left; margin-bottom: 30px;">
                                 <p style="font-size: 14px; margin-bottom: 5px; color: #333;"><strong>Username:</strong> JohnDoe</p>
                                 <p style="font-size: 14px; margin-bottom: 5px; color: #333;"><strong>Email:</strong> john@example.com</p>
                                 <p style="font-size: 14px; margin-bottom: 5px; color: #333;"><strong>Role:</strong> Admin</p>
@@ -239,7 +266,7 @@
                             </li>
                             <li>
                                 <a href="#" class="btn btn-danger w-100" style="background-color: #FF4B4B; border: none; border-radius: 8px; padding: 10px 0; font-size: 16px; text-transform: uppercase;">
-                                    <i class="fa fa-sign-out-alt"></i> Log Out
+                                    <i class="fa fa-sign-out-alt"></i>Log Out
                                 </a>
                             </li>
                         </ul>
