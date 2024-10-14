@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Smart_RestRoom.Site1" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Smart_RestRoom.Site1" %>
 
 <!DOCTYPE html>
 <html>
@@ -122,37 +122,16 @@
                 contentArea.classList.remove('collapsed');
             }
 
-            const texts = document.getElementsByClassName('item-text');
-            for (let text of texts) {
-                text.style.opacity = sidebarState === 'collapsed' ? '0' : '1';
-                text.style.width = sidebarState === 'collapsed' ? '0' : 'auto';
-            }
+        const texts = document.getElementsByClassName('item-text');
+        for (let text of texts) {
+            text.style.opacity = sidebarState === 'collapsed' ? '0' : '1';
+            text.style.width = sidebarState === 'collapsed' ? '0' : 'auto';
         }
-        document.addEventListener('DOMContentLoaded', restoreSidebarState);
+    }
 
-        $(document).ready(function () {
-          
-            const activeLink = localStorage.getItem('activeLink');
-            if (activeLink) {
-                $('.list-group-item').removeClass('active');
-                $('#' + activeLink).addClass('active');
-            }
-
-            $('.list-group-item').click(function () {
-                
-                $('.list-group-item').removeClass('active');
-
-                
-                $(this).addClass('active');
-
-                localStorage.setItem('activeLink', this.id);
-
-               
-                console.log($(this).text() + " is active now");
-            });
-        });
-
-    </script>
+    // Call the restoreSidebarState function on page load
+    document.addEventListener('DOMContentLoaded', restoreSidebarState);
+</script>
 
 
     
