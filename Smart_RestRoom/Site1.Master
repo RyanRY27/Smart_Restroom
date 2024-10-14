@@ -62,92 +62,102 @@
             transform: translateY(-2px);
         }
 
+        #content-area {
+            margin-left: 250px; 
+            padding: 20px; 
+            padding-top: 100px; 
+            transition: margin-left 0.3s ease;
+            min-height: calc(100vh - 60px); 
+        }
 
-        /* Adjust content layout when sidebar is collapsed or expanded */
-    #content-area {
-    margin-left: 250px; /* Keep it aligned next to the sidebar */
-    padding: 20px; /* Add padding */
-    padding-top: 100px; /* Add top padding to clear the navbar */
-    transition: margin-left 0.3s ease;
-    min-height: calc(100vh - 60px); /* Ensure it covers full height */
-}
+        @media (max-width: 768px) {
+            #content-area {
+                margin-left: 250px; 
+                padding-top: 80px;
+            }
 
-/* Adjust for smaller screens */
-@media (max-width: 768px) {
-    #content-area {
-        margin-left: 250px; /* Keep the same margin as larger screens */
-        padding-top: 80px;
-    }
-
-    #sidebar {
-        width: 250px; /* Ensure the sidebar maintains its width */
-        top: 60px;
-    }
-}
-
-
+            #sidebar {
+                width: 250px; 
+                top: 60px;
+            }
+        }
 
         #content-area.collapsed {
-            margin-left: 70px; /* When sidebar is collapsed */
+            margin-left: 70px; 
         }
-
-       
-
     </style>
 
-<script>
-    // Function to toggle the sidebar and save state to localStorage
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        const contentArea = document.getElementById('content-area');
-        const isCollapsed = sidebar.style.width === '70px';
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const contentArea = document.getElementById('content-area');
+            const isCollapsed = sidebar.style.width === '70px';
 
-        if (isCollapsed) {
-            sidebar.style.width = '250px';
-            contentArea.classList.remove('collapsed'); // Expand content area
-            localStorage.setItem('sidebarState', 'expanded');
-        } else {
-            sidebar.style.width = '70px';
-            contentArea.classList.add('collapsed'); // Collapse content area
-            localStorage.setItem('sidebarState', 'collapsed');
+            if (isCollapsed) {
+                sidebar.style.width = '250px';
+                contentArea.classList.remove('collapsed');
+                localStorage.setItem('sidebarState', 'expanded');
+            } else {
+                sidebar.style.width = '70px';
+                contentArea.classList.add('collapsed'); 
+                localStorage.setItem('sidebarState', 'collapsed');
+            }
+
+            const texts = document.getElementsByClassName('item-text');
+            for (let text of texts) {
+                text.style.opacity = isCollapsed ? '1' : '0';
+                text.style.width = isCollapsed ? 'auto' : '0';
+            }
         }
+        function restoreSidebarState() {
+            const sidebar = document.getElementById('sidebar');
+            const contentArea = document.getElementById('content-area');
+            const sidebarState = localStorage.getItem('sidebarState');
 
-        // Toggle the text opacity for the sidebar items
-        const texts = document.getElementsByClassName('item-text');
-        for (let text of texts) {
-            text.style.opacity = isCollapsed ? '1' : '0';
-            text.style.width = isCollapsed ? 'auto' : '0';
+            if (sidebarState === 'collapsed') {
+                sidebar.style.width = '70px';
+                contentArea.classList.add('collapsed');
+            } else {
+                sidebar.style.width = '250px';
+                contentArea.classList.remove('collapsed');
+            }
+
+            const texts = document.getElementsByClassName('item-text');
+            for (let text of texts) {
+                text.style.opacity = sidebarState === 'collapsed' ? '0' : '1';
+                text.style.width = sidebarState === 'collapsed' ? '0' : 'auto';
+            }
         }
-    }
+        document.addEventListener('DOMContentLoaded', restoreSidebarState);
 
-    // Function to restore the sidebar state on page load
-    function restoreSidebarState() {
-        const sidebar = document.getElementById('sidebar');
-        const contentArea = document.getElementById('content-area');
-        const sidebarState = localStorage.getItem('sidebarState');
+        $(document).ready(function () {
+          
+            const activeLink = localStorage.getItem('activeLink');
+            if (activeLink) {
+                $('.list-group-item').removeClass('active');
+                $('#' + activeLink).addClass('active');
+            }
 
-        if (sidebarState === 'collapsed') {
-            sidebar.style.width = '70px';
-            contentArea.classList.add('collapsed');
-        } else {
-            sidebar.style.width = '250px';
-            contentArea.classList.remove('collapsed');
-        }
+            $('.list-group-item').click(function () {
+                
+                $('.list-group-item').removeClass('active');
 
-        const texts = document.getElementsByClassName('item-text');
-        for (let text of texts) {
-            text.style.opacity = sidebarState === 'collapsed' ? '0' : '1';
-            text.style.width = sidebarState === 'collapsed' ? '0' : 'auto';
-        }
-    }
+                
+                $(this).addClass('active');
 
-    // Call the restoreSidebarState function on page load
-    document.addEventListener('DOMContentLoaded', restoreSidebarState);
-</script>
+                localStorage.setItem('activeLink', this.id);
+
+               
+                console.log($(this).text() + " is active now");
+            });
+        });
+
+    </script>
 
 
     
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
 </head>
 <body style="background-color: #D7D7D7;">
     <form id="form1" runat="server">
@@ -238,27 +248,27 @@
 
         <div id="sidebar" class="sidebar position-fixed vh-100" style="position: fixed; top: 80px; background-color: #EFEFEF; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 250px; transition: width 0.3s ease; padding-top: 20px; border-right: 4px solid #BFBFBF;">
             <div class="list-group">
-                <a href="Dashboard.aspx" class="list-group-item list-group-item-action active" style="display: flex; margin-top: 25px; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="dashboard-link" href="Dashboard.aspx" class="list-group-item list-group-item-action" style="display: flex; margin-top: 25px; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-toilet text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Dashboard</span>
                 </a>
-                <a href="Usagemonitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="usage-monitor-link" href="Usagemonitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-chart-line text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Usage Monitor</span>
                 </a>
-                <a href="Resources.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="resources-link" href="Resources.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-chart-column text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Resources</span>
                 </a>
-                <a href="Schedule.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="schedule-link" href="Schedule.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-calendar-days text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Schedule</span>
                 </a>
-                <a href="Janitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="janitor-link" href="Janitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-user text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Janitor</span>
                 </a>
-                <a href="Settings.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="settings-link" href="Settings.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-gear text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Settings</span>
                 </a>
