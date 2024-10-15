@@ -87,10 +87,6 @@
                                             <li><a class="dropdown-item" href="#" style="margin-right: 30px;">Monthly</a></li>
                                         </ul>
                                     </div>
-
-
-
-
                                 </div>
                             </div>
                         </div>
