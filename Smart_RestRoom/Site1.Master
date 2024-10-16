@@ -106,8 +106,6 @@
         #content-area.collapsed {
             margin-left: 70px;
         }
-       
-
     </style>
 
     <script>
@@ -180,8 +178,8 @@
         $(document).ready(function () {
             $('.dropdown-item').click(function (e) {
                 e.preventDefault();
-                var target = $(this).data('target'); 
-                var newValue = $(this).data('value'); 
+                var target = $(this).data('target');
+                var newValue = $(this).data('value');
 
                 $(target).html(newValue + ': <span class="badge rounded-pill" style="font-size: 20px; color: white;">Updated Data</span>');
             });
