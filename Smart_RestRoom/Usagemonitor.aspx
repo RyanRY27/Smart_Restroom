@@ -102,7 +102,8 @@
                         </div>
                     </div>
                     <div class="row g-2 mt-1">
-                        <div class="col-12 col-md-6 col-lg-6">
+                        <!-- First card: Usage Chart -->
+                        <div class="col-12 col-md-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
                                 <div class="card-body" style="height: 500px;">
                                     <div class="container mt-4">
@@ -113,16 +114,18 @@
                                         <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fa-solid fa-ellipsis"></i>
                                         </button>
-                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButtonCleaning" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="Today Total Cleaning">Bar Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="This Week Total Cleaning">Line Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="This Month Total Cleaning">Area Chart</a></li>
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
+                                            <li><a class="dropdown-item" href="#" data-value="Line Chart1">Line Chart</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="Bar Chart1">Bar Chart</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="Donut Chart1">Donut Chart</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-6">
+
+                        <!-- Second card: Cubicle Usage Chart -->
+                        <div class="col-12 col-md-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
                                 <div class="card-body" style="height: 500px;">
                                     <div class="container mt-4">
@@ -134,15 +137,16 @@
                                             <i class="fa-solid fa-ellipsis"></i>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButtonCleaning" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="Today Total Cleaning">Bar Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="This Week Total Cleaning">Line Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="This Month Total Cleaning">Area Chart</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="Line Chart">Line Chart</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="Bar Chart">Bar Chart</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="Donut Chart">Donut Chart</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="row g-2 mt-1">
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
@@ -156,9 +160,9 @@
                                             <i class="fa-solid fa-ellipsis"></i>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButtonCleaning" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="Today Total Cleaning">Bar Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="This Week Total Cleaning">Line Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="This Month Total Cleaning">Area Chart</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="Line Chart2">Line Chart</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="Bar Chart2">Bar Chart</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="Donut Chart2">Donut Chart</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -177,9 +181,9 @@
                                                 <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButtonCleaning" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                                <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="Today Total Cleaning">Bar Chart</a></li>
-                                                <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="This Week Total Cleaning">Line Chart</a></li>
-                                                <li><a class="dropdown-item" href="#" style="margin-right: 30px;" data-target="#cleaning" data-value="This Month Total Cleaning">Area Chart</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="Line Chart3">Line Chart</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="Bar Chart3">Bar Chart</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="Donut Chart3">Donut Chart</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -307,61 +311,94 @@
                 </div>
             </div>
         </div>
+    </div>
 
 
 
+    <%--usage chart sample data--%>
 
-        <%--usage chart sample data--%>
+    <script>
+        $(document).ready(function () {
 
-        <script>
-            $(document).ready(function () {
-                var ctx = document.getElementById('cubicleusage').getContext('2d');
-                var cubicleusage = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Cubicle 1', 'Cubicle 2', 'Cubicle 3', 'Cubicle 4', 'Cubicle 5', 'Cubicle 6'],
-                        datasets: [{
-                            label: 'Cubicle Usage',
-                            data: [15, 25, 10, 30, 35, 20],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Usage Count'
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Cubicle Number'
-                                }
+            var ctx = document.getElementById('cubicleusage').getContext('2d');
+            var cubicleusage = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Cubicle 1', 'Cubicle 2', 'Cubicle 3', 'Cubicle 4', 'Cubicle 5', 'Cubicle 6'],
+                    datasets: [{
+                        label: 'Cubicle Usage',
+                        data: [15, 25, 10, 30, 35, 20],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Usage Count'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Cubicle Number'
                             }
                         }
                     }
-                });
+                }
             });
 
+
+            function updateChartType(type) {
+                cubicleusage.config.type = type;
+                cubicleusage.update();
+            }
+
+
+            $('.dropdown-menu .dropdown-item').click(function () {
+                var selectedValue = $(this).data('value');
+                var chartType;
+
+                switch (selectedValue) {
+                    case 'Bar Chart':
+                        chartType = 'bar';
+                        break;
+                    case 'Line Chart':
+                        chartType = 'line';
+                        break;
+                    case 'Donut Chart':
+                        chartType = 'doughnut';
+                        break;
+                }
+
+                if (chartType) {
+                    updateChartType(chartType);
+                }
+            });
+        });
+
+
+        $(document).ready(function () {
 
             var ctx = document.getElementById('usagechart').getContext('2d');
             var usagechart = new Chart(ctx, {
@@ -371,15 +408,32 @@
                     datasets: [{
                         label: 'Cubicle Usage',
                         data: [3, 7, 5, 8, 6, 10, 4, 9],
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 2,
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1,
                         fill: true,
                         tension: 0.4
                     }]
                 },
                 options: {
-                    responsive: true,
                     scales: {
                         y: {
                             beginAtZero: true,
@@ -398,104 +452,211 @@
                 }
             });
 
-            $(document).ready(function () {
-                var ctx = document.getElementById('aiusagechart').getContext('2d');
-                var aiUsageChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                        datasets: [{
-                            label: 'AI Usage Prediction',
-                            data: [5, 10, 15, 20, 25, 30, 35],
-                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                            borderColor: 'rgba(255, 206, 86, 1)',
-                            borderWidth: 2,
-                            fill: true,
-                            tension: 0.4
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Predicted Usage'
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Time'
-                                }
+            function updateChartType(type) {
+                usagechart.config.type = type;
+                usagechart.update();
+            }
+
+            $('.dropdown-menu .dropdown-item').click(function () {
+                var selectedValue = $(this).data('value');
+                var chartType;
+
+                switch (selectedValue) {
+                    case 'Bar Chart1':
+                        chartType = 'bar';
+                        break;
+                    case 'Line Chart1':
+                        chartType = 'line';
+                        break;
+                    case 'Donut Chart1':
+                        chartType = 'doughnut';
+                        break;
+                }
+
+                if (chartType) {
+                    updateChartType(chartType);
+                }
+            });
+        });
+
+
+        $(document).ready(function () {
+            var ctx = document.getElementById('aiusagechart').getContext('2d');
+            var aiusagechart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: 'AI Usage Prediction',
+                        data: [5, 10, 15, 20, 25, 30, 35],
+
+
+                        backgroundColor: [
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Predicted Usage'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Time'
                             }
                         }
                     }
-                });
+                }
             });
-            $(document).ready(function () {
-                var aiPredictionData = [18, 22, 12, 33, 28, 25];
+            function updateChartType(type) {
+                aiusagechart.config.type = type;
+                aiusagechart.update();
+            }
 
-                var ctx = document.getElementById('aicubicleusage').getContext('2d');
-                var aicubicleusage = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Cubicle 1', 'Cubicle 2', 'Cubicle 3', 'Cubicle 4', 'Cubicle 5', 'Cubicle 6'],
-                        datasets: [{
-                            label: 'AI Predicted Cubicle Usage',
-                            data: aiPredictionData,
-                            backgroundColor: [
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
-                            ],
-                            borderColor: [
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Predicted Usage Count'
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Cubicle Number'
-                                }
+            $('.dropdown-menu .dropdown-item').click(function () {
+                var selectedValue = $(this).data('value');
+                var chartType;
+
+                switch (selectedValue) {
+                    case 'Bar Chart2':
+                        chartType = 'bar';
+                        break;
+                    case 'Line Chart2':
+                        chartType = 'line';
+                        break;
+                    case 'Donut Chart2':
+                        chartType = 'doughnut';
+                        break;
+                }
+
+                if (chartType) {
+                    updateChartType(chartType);
+                }
+            });
+        });
+
+
+        $(document).ready(function () {
+            var aiPredictionData = [18, 22, 12, 33, 28, 25];
+
+            var ctx = document.getElementById('aicubicleusage').getContext('2d');
+            var aicubicleusage = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Cubicle 1', 'Cubicle 2', 'Cubicle 3', 'Cubicle 4', 'Cubicle 5', 'Cubicle 6'],
+                    datasets: [{
+                        label: 'AI Predicted Cubicle Usage',
+                        data: aiPredictionData,
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1,
+                        fill: true,
+                        tension: 0.4
+
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Predicted Usage Count'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Cubicle Number'
                             }
                         }
                     }
-                });
+                }
             });
+            function updateChartType(type) {
+                aicubicleusage.config.type = type;
+                aicubicleusage.update();
+            }
 
-            //datatbles sample
-            $(document).ready(function () {
+            $('.dropdown-menu .dropdown-item').click(function () {
+                var selectedValue = $(this).data('value');
+                var chartType;
 
-                $('#cubicleUsageTable').DataTable({
-                    "paging": true,
-                    "searching": true,
-                    "ordering": true,
-                    "info": true
-                });
+                switch (selectedValue) {
+                    case 'Bar Chart3':
+                        chartType = 'bar';
+                        break;
+                    case 'Line Chart3':
+                        chartType = 'line';
+                        break;
+                    case 'Donut Chart3':
+                        chartType = 'doughnut';
+                        break;
+                }
+
+                if (chartType) {
+                    updateChartType(chartType);
+                }
             });
+        });
 
-        </script>
+        //datatbles sample js
+        $(document).ready(function () {
+
+            $('#cubicleUsageTable').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "info": true
+            });
+        });
+
+    </script>
 </asp:Content>
 
 
