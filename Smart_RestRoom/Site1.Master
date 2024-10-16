@@ -106,6 +106,8 @@
         #content-area.collapsed {
             margin-left: 70px;
         }
+       
+
     </style>
 
     <script>
