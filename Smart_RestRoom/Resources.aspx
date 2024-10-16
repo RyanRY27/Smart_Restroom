@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Resources" Language="C#" MasterPageFile="~/Site1.master" AutoEventWireup="true" CodeBehind="UsageMonitor.aspx.cs" Inherits="Smart_RestRoom.Usagemonitor" %>
+﻿    <%@ Page Title="Resources" Language="C#" MasterPageFile="~/Site1.master" AutoEventWireup="true" CodeBehind="UsageMonitor.aspx.cs" Inherits="Smart_RestRoom.Usagemonitor" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid" style="padding: 20px;">
