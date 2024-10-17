@@ -107,92 +107,99 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row g-2 mt-1">
-                        <!-- First card -->
-                        <div class="col-12 col-md-6">
-                            <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
-                                <div class="card-body" style="height: 500px;">
-                                    <div class="container mt-4">
-                                        <h3>Usage Chart</h3>
-                                        <canvas id="usagechart" width="400" height="200"></canvas>
-                                    </div>
-                                    <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
-                                        <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fa-solid fa-ellipsis"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                            <li><a class="dropdown-item" href="#" data-value="Line Chart1">Line Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" data-value="Bar Chart1">Bar Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" data-value="Donut Chart1">Donut Chart</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                        <!-- Second card -->
-                        <div class="col-12 col-md-6 col-lg-6">
-                            <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
-                                <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
-                                    <div class="container mt-4" style="height: 100%; max-height: 370px;">
-                                        <h3>Cubicle Usage Chart</h3>
-                                        <canvas id="cubicleusage" style="max-width: 100%; max-height: 100%;"></canvas>
-                                    </div>
-                                    <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
-                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fa-solid fa-ellipsis"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                            <li><a class="dropdown-item" href="#" data-value="Line Chart">Line Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" data-value="Bar Chart">Bar Chart</a></li>
-                                            <li><a class="dropdown-item" href="#" data-value="Donut Chart">Donut Chart</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- third card-->
-                        <div class="row g-2 mt-1">
-                            <div class="col-12 col-md-6 col-lg-6">
-                                <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
-                                    <div class="card-body" style="height: 500px;">
-                                        <div class="container mt-4">
-                                            <h3>AI Usage Prediction</h3>
-                                            <canvas id="aiusagechart" width="400" height="200"></canvas>
-                                        </div>
-                                        <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
-                                            <button class="btn" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa-solid fa-ellipsis"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButtonCleaning" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                                <li><a class="dropdown-item" href="#" data-value="Line Chart2">Line Chart</a></li>
-                                                <li><a class="dropdown-item" href="#" data-value="Bar Chart2">Bar Chart</a></li>
-                                                <li><a class="dropdown-item" href="#" data-value="Donut Chart2">Donut Chart</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fourth card -->
-                            <div class="col-12 col-md-6 col-lg-6">
-                                <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
-                                    <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
-                                        <div class="container mt-4" style="height: 100%; max-height: 370px;">
-                                            <h3>AI Cubicle Usage prediction</h3>
-                                            <canvas id="aicubicleusage" style="max-width: 100%; max-height: 100%;"></canvas>
-                                        </div>
-                                        <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
-                                            <button class="btn" type="button" id="dropdownMenuButton11" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa-solid fa-ellipsis"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                                <li><a class="dropdown-item" href="#" data-value="Line Chart3">Line Chart</a></li>
-                                                <li><a class="dropdown-item" href="#" data-value="Bar Chart3">Bar Chart</a></li>
-                                                <li><a class="dropdown-item" href="#" data-value="Donut Chart3">Donut Chart</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<div class="row g-2 mt-1">
+    <!-- First card -->
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
+            <div class="card-body" style="height: 500px;">
+                <div class="container mt-4">
+                    <h3>Usage Chart</h3>
+                    <canvas id="usagechart" width="400" height="200"></canvas>
+                </div>
+                <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
+                    <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
+                        <li><a class="dropdown-item" href="#" data-value="Line Chart1">Line Chart</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="Bar Chart1">Bar Chart</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="Donut Chart1">Donut Chart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second card -->
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
+            <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
+                <div class="container mt-4" style="height: 100%; max-height: 370px;">
+                    <h3>Cubicle Usage Chart</h3>
+                    <canvas id="cubicleusage" style="max-width: 100%; max-height: 100%;"></canvas>
+                </div>
+                <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
+                    <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
+                        <li><a class="dropdown-item" href="#" data-value="Line Chart">Line Chart</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="Bar Chart">Bar Chart</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="Donut Chart">Donut Chart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Third and fourth cards -->
+<div class="row g-2 mt-1">
+    <!-- Third card -->
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
+            <div class="card-body" style="height: 500px;">
+                <div class="container mt-4">
+                    <h3>AI Usage Prediction</h3>
+                    <canvas id="aiusagechart" width="400" height="200"></canvas>
+                </div>
+                <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
+                    <button class="btn" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButtonCleaning" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
+                        <li><a class="dropdown-item" href="#" data-value="Line Chart2">Line Chart</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="Bar Chart2">Bar Chart</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="Donut Chart2">Donut Chart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fourth card -->
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
+            <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
+                <div class="container mt-4" style="height: 100%; max-height: 370px;">
+                    <h3>AI Cubicle Usage Prediction</h3>
+                    <canvas id="aicubicleusage" style="max-width: 100%; max-height: 100%;"></canvas>
+                </div>
+                <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
+                    <button class="btn" type="button" id="dropdownMenuButton11" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
+                        <li><a class="dropdown-item" href="#" data-value="Line Chart3">Line Chart</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="Bar Chart3">Bar Chart</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="Donut Chart3">Donut Chart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
                             <div class="row g-2 mt-1">
                                 <div class="col-12">
                                     <div class="card" style="border-radius: 20px; background-color: #EFEFEF;">
@@ -261,8 +268,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+    
 
 
     <%--usage chart sample data--%>
