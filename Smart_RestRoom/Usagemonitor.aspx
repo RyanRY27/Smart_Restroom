@@ -7,11 +7,17 @@
                 <h2 style="margin-bottom: 30px; font-weight: bold; font-size: 40px">Usage Monitor</h2>
                 <div class="container-fluid px-0">
                     <div class="row g-2">
-                        <div class="col-12 col-md-6 col-lg-4 text-center">
+                          <div class="col-12 col-md-6 col-lg-4 text-center">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; position: relative;">
                                 <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold; height: 120px; position: relative;">
                                     <div class="card-title">
                                         RestRoom Status:
+                                        <i class="bi bi-info-circle" style="font-size: 23px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" 
+                                           title="&lt;strong&gt;Status:&lt;/strong&gt;&lt;br&gt;
+                                           &lt;strong&gt;Clean:&lt;/strong&gt; The restroom is spotless and well-maintained.&lt;br&gt;
+                                           &lt;strong&gt;Moderate:&lt;/strong&gt; Minor dirt or stains, mild odors, and some supplies are running low.&lt;br&gt;
+                                           &lt;strong&gt;Dirty:&lt;/strong&gt; The restroom needs immediate attention and supplies are empty.">
+                                        </i>
                                         <span class="badge rounded-pill text-bg-danger" style="font-size: 20px; color: white">Dirty</span>
                                     </div>
                                 </div>
@@ -122,8 +128,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
+                        </div>  
                         <!-- Second card -->
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
@@ -145,9 +150,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
                         <!-- third card-->
                         <div class="row g-2 mt-1">
                             <div class="col-12 col-md-6 col-lg-6">
@@ -170,7 +172,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- fourth card -->
                             <div class="col-12 col-md-6 col-lg-6">
                                 <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF;">
@@ -192,7 +193,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row g-2 mt-1">
                                 <div class="col-12">
                                     <div class="card" style="border-radius: 20px; background-color: #EFEFEF;">
@@ -201,108 +201,55 @@
                                             <table id="cubicleUsageTable" class="display" style="width: 100%">
                                                 <thead>
                                                     <tr>
+                                                        <th>Usage Number</th>
                                                         <th>Cubicle Number</th>
-                                                        <th>Usage#</th>
-                                                        <th>AI Predicted Usage</th>
-                                                        <th>Status</th>
+                                                        <th>Time IN:</th>
+                                                        <th>Time OUT:</th>
+                                                        <th>Date:</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Cubicle 1</td>
-                                                        <td>20</td>
-                                                        <td>18</td>
-                                                        <td>Active</td>
+                                                        <td>UN01</td>
+                                                        <td>1</td>
+                                                        <td>07:00 AM</td>
+                                                        <td>07:10 AM</td>
+                                                        <td>10/17/24</td>            
                                                     </tr>
                                                     <tr>
-                                                        <td>Cubicle 2</td>
-                                                        <td>10</td>
-                                                        <td>22</td>
-                                                        <td>Active</td>
+                                                        <td>UN01</td>
+                                                        <td>1</td>
+                                                        <td>07:00 AM</td>
+                                                        <td>07:10 AM</td>
+                                                        <td>10/17/24</td>  
                                                     </tr>
                                                     <tr>
-                                                        <td>Cubicle 3</td>
-                                                        <td>100</td>
-                                                        <td>12</td>
-                                                        <td>Idle</td>
+                                                        <td>UN01</td>
+                                                        <td>1</td>
+                                                        <td>07:00 AM</td>
+                                                        <td>07:10 AM</td>
+                                                        <td>10/17/24</td>  
                                                     </tr>
                                                     <tr>
-                                                        <td>Cubicle 4</td>
-                                                        <td>1000</td>
-                                                        <td>33</td>
-                                                        <td>Active</td>
+                                                        <td>UN01</td>
+                                                        <td>1</td>
+                                                        <td>07:00 AM</td>
+                                                        <td>07:10 AM</td>
+                                                        <td>10/17/24</td>  
                                                     </tr>
                                                     <tr>
-                                                        <td>Cubicle 5</td>
-                                                        <td>19</td>
-                                                        <td>28</td>
-                                                        <td>Active</td>
+                                                        <td>UN01</td>
+                                                        <td>1</td>
+                                                        <td>07:00 AM</td>
+                                                        <td>07:10 AM</td>
+                                                        <td>10/17/24</td>  
                                                     </tr>
                                                     <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cubicle 6</td>
-                                                        <td>190</td>
-                                                        <td>25</td>
-                                                        <td>Active</td>
+                                                        <td>UN01</td>
+                                                        <td>1</td>
+                                                        <td>07:00 AM</td>
+                                                        <td>07:10 AM</td>
+                                                        <td>10/17/24</td>  
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -658,6 +605,14 @@
                 "info": true
             });
         });
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+
+
 
     </script>
 </asp:Content>
