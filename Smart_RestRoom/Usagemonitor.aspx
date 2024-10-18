@@ -209,66 +209,67 @@
                             <div class="card" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                                 <div class="card-body">
                                     <h3 class="card-title" style="font-weight: bold;">Usage Report</h3>
-                                    <table id="cubicleUsageTable" class="display" style="width: 100%; text-align: left;">
-                                        <thead>
-                                            <tr>
-                                                <th style="text-align: left;">Usage Number</th>
-                                                <th style="text-align: left;">Cubicle Number</th>
-                                                <th style="text-align: left;">Time IN:</th>
-                                                <th style="text-align: left;">Time OUT:</th>
-                                                <th style="text-align: left;">Date:</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="text-align: left;">UN01</td>
-                                                <td style="text-align: left;">Cubicle 1</td>
-                                                <td style="text-align: left;">07:00 AM</td>
-                                                <td style="text-align: left;">07:10 AM</td>
-                                                <td style="text-align: left;">10/17/24</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="text-align: left;">UN02</td>
-                                                <td style="text-align: left;">Cubicle 2</td>
-                                                <td style="text-align: left;">07:15 AM</td>
-                                                <td style="text-align: left;">07:25 AM</td>
-                                                <td style="text-align: left;">10/17/24</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="text-align: left;">UN03</td>
-                                                <td style="text-align: left;">Cubicle 3</td>
-                                                <td style="text-align: left;">07:30 AM</td>
-                                                <td style="text-align: left;">07:40 AM</td>
-                                                <td style="text-align: left;">10/17/24</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="text-align: left;">UN04</td>
-                                                <td style="text-align: left;">Cubicle 4</td>
-                                                <td style="text-align: left;">07:45 AM</td>
-                                                <td style="text-align: left;">07:55 AM</td>
-                                                <td style="text-align: left;">10/17/24</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="text-align: left;">UN05</td>
-                                                <td style="text-align: left;">Cubicle 5</td>
-                                                <td style="text-align: left;">08:00 AM</td>
-                                                <td style="text-align: left;">08:10 AM</td>
-                                                <td style="text-align: left;">10/17/24</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="text-align: left;">UN06</td>
-                                                <td style="text-align: left;">Cubicle 6</td>
-                                                <td style="text-align: left;">08:15 AM</td>
-                                                <td style="text-align: left;">08:25 AM</td>
-                                                <td style="text-align: left;">10/17/24</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="table-responsive">
+                                        <table id="cubicleUsageTable" class="display" style="width: 100%; text-align: left;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="text-align: left;">Usage Number</th>
+                                                    <th style="text-align: left;">Cubicle Number</th>
+                                                    <th style="text-align: left;">Time IN:</th>
+                                                    <th style="text-align: left;">Time OUT:</th>
+                                                    <th style="text-align: left;">Date:</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: left;">UN01</td>
+                                                    <td style="text-align: left;">Cubicle 1</td>
+                                                    <td style="text-align: left;">07:00 AM</td>
+                                                    <td style="text-align: left;">07:10 AM</td>
+                                                    <td style="text-align: left;">10/17/24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">UN02</td>
+                                                    <td style="text-align: left;">Cubicle 2</td>
+                                                    <td style="text-align: left;">07:15 AM</td>
+                                                    <td style="text-align: left;">07:25 AM</td>
+                                                    <td style="text-align: left;">10/17/24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">UN03</td>
+                                                    <td style="text-align: left;">Cubicle 3</td>
+                                                    <td style="text-align: left;">07:30 AM</td>
+                                                    <td style="text-align: left;">07:40 AM</td>
+                                                    <td style="text-align: left;">10/17/24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">UN04</td>
+                                                    <td style="text-align: left;">Cubicle 4</td>
+                                                    <td style="text-align: left;">07:45 AM</td>
+                                                    <td style="text-align: left;">07:55 AM</td>
+                                                    <td style="text-align: left;">10/17/24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">UN05</td>
+                                                    <td style="text-align: left;">Cubicle 5</td>
+                                                    <td style="text-align: left;">08:00 AM</td>
+                                                    <td style="text-align: left;">08:10 AM</td>
+                                                    <td style="text-align: left;">10/17/24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">UN06</td>
+                                                    <td style="text-align: left;">Cubicle 6</td>
+                                                    <td style="text-align: left;">08:15 AM</td>
+                                                    <td style="text-align: left;">08:25 AM</td>
+                                                    <td style="text-align: left;">10/17/24</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -658,7 +659,7 @@
                 "searching": true,
                 "ordering": true,
                 "info": true,
-                "order": [] 
+                "order": []
             });
         });
 
