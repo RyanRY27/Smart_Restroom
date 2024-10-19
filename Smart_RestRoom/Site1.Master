@@ -4,222 +4,23 @@
 <html>
 <head runat="server">
     <title></title>
-
-    <link href="Bootsrap/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link href="/Resources/Bootsrap/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="Bootsrap/js/popper.min.js"></script>
-    <script src="Bootsrap/js/bootstrap.min.js"></script>
+    <script src="/Resources/Bootsrap/js/popper.min.js"></script>
+    <script src="/Resources/Bootsrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="Datatables/css/dataTables.dataTables.min.css" rel="stylesheet" />
-    <script src="Datatables/js/dataTables.min.js"></script>
+    <link href="/Resources/Datatables/css/dataTables.dataTables.min.css" rel="stylesheet" />
+    <script src="/Resources/Datatables/js/dataTables.min.js"></script>
 
-    <link href="Fontawesome/css/all.css" rel="stylesheet" />
-
-    <style>
-        #sidebar .list-group-item {
-            text-decoration: none;
-            border: none;
-            background-color: #EFEFEF;
-            transition: all 0.3s ease;
-            border-radius: 12px;
-            padding: 10px 20px;
-            margin-bottom: 10px;
-        }
-
-            #sidebar .list-group-item:hover {
-                background-color: #D7D7D7;
-                color: #1D1D1D;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                transform: translateY(-2px);
-                padding-left: 15px;
-                padding-right: 15px;
-                width: 90%;
-                margin-left: 5%;
-            }
-
-            #sidebar .list-group-item.active {
-                background-color: #D1D9FF;
-                color: #1D1D1D;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                transform: translateY(-2px);
-                padding-left: 15px;
-                padding-right: 15px;
-                width: 90%;
-                margin-left: 5%;
-            }
-
-        .dropdown-item {
-            background-color: #EFEFEF;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            padding: 10px;
-            color: black;
-        }
-
-            .dropdown-item:hover {
-                background-color: #D7D7D7;
-                color: #1D1D1D;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                transform: translateY(-2px);
-                padding-left: 15px;
-                padding-right: 15px;
-                width: 90%;
-                margin-left: 5%;
-            }
-
-        .nav-item .dropdown-item {
-            background-color: #EFEFEF;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            padding: 10px;
-            color: black;
-            transform: scale(1);
-        }
-
-            .nav-item .dropdown-item:hover {
-                background-color: #D7D7D7;
-                color: #1D1D1D;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                transform: scale(1.1);
-            }
-
-        #content-area {
-            margin-left: 250px;
-            padding: 20px;
-            padding-top: 100px;
-            transition: margin-left 0.3s ease;
-            min-height: calc(100vh - 60px);
-        }
-
-        @media (max-width: 768px) {
-            #content-area {
-                margin-left: 250px;
-                padding-top: 80px;
-            }
-
-            #sidebar {
-                width: 250px;
-                top: 60px;
-            }
-        }
-
-        #content-area.collapsed {
-            margin-left: 70px;
-        }
-
-        .tooltip-inner {
-            text-align: left !important;
-        }
-
-        .chart-link {
-            display: inline-block;
-            padding: 8px 12px;
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            background-color: transparent;
-        }
-
-            .chart-link.active {
-                background-color: #D7D7D7;
-                color: #1D1D1D;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-
-            .chart-link:hover {
-                background-color: #D1D9FF;
-                color: #1D1D1D;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                border-radius: 8px;
-            }
-    </style>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const contentArea = document.getElementById('content-area');
-            const isCollapsed = sidebar.style.width === '70px';
-
-            if (isCollapsed) {
-                sidebar.style.width = '250px';
-                contentArea.classList.remove('collapsed');
-                localStorage.setItem('sidebarState', 'expanded');
-            } else {
-                sidebar.style.width = '70px';
-                contentArea.classList.add('collapsed');
-                localStorage.setItem('sidebarState', 'collapsed');
-            }
-
-            const texts = document.getElementsByClassName('item-text');
-            for (let text of texts) {
-                text.style.opacity = isCollapsed ? '1' : '0';
-                text.style.width = isCollapsed ? 'auto' : '0';
-            }
-        }
-        function restoreSidebarState() {
-            const sidebar = document.getElementById('sidebar');
-            const contentArea = document.getElementById('content-area');
-            const sidebarState = localStorage.getItem('sidebarState');
-
-            if (sidebarState === 'collapsed') {
-                sidebar.style.width = '70px';
-                contentArea.classList.add('collapsed');
-            } else {
-                sidebar.style.width = '250px';
-                contentArea.classList.remove('collapsed');
-            }
-
-            const texts = document.getElementsByClassName('item-text');
-            for (let text of texts) {
-                text.style.opacity = sidebarState === 'collapsed' ? '0' : '1';
-                text.style.width = sidebarState === 'collapsed' ? '0' : 'auto';
-            }
-        }
-        document.addEventListener('DOMContentLoaded', restoreSidebarState);
-
-        $(document).ready(function () {
-
-            const activeLink = localStorage.getItem('activeLink');
-            if (activeLink) {
-                $('.list-group-item').removeClass('active');
-                $('#' + activeLink).addClass('active');
-            }
-
-
-            $('.list-group-item').click(function () {
-
-                $('.list-group-item').removeClass('active');
-
-
-                $(this).addClass('active');
-
-
-                localStorage.setItem('activeLink', this.id);
-
-
-                console.log($(this).text() + " is active now");
-            });
-        });
-
-        $(document).ready(function () {
-            $('.dropdown-item').click(function (e) {
-                e.preventDefault();
-                var target = $(this).data('target');
-                var newValue = $(this).data('value');
-
-                $(target).html(newValue + ': <span class="badge rounded-pill" style="font-size: 20px; color: white;">Updated Data</span>');
-            });
-        });
-
-
-
-    </script>
-
-
+    <link href="/Resources/Fontawesome/css/all.css" rel="stylesheet" />
+    <link href="/Resources/CSS/all.css" rel="stylesheet" />
+    <script src="/Resources/JS/sitemaster.js"></script>
+    <script src="/Resources/JS/janitor.js"></script>
+    <script src="/Resources/JS/schedule.js"></script>
+    <script src="/Resources/JS/usagemonitor.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
@@ -316,30 +117,30 @@
                 </div>
             </nav>
         </div>
-
+       
         <div id="sidebar" class="sidebar position-fixed vh-100" style="position: fixed; top: 80px; background-color: #EFEFEF; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 250px; transition: width 0.3s ease; padding-top: 20px; border-right: 4px solid #BFBFBF;">
             <div class="list-group">
-                <a id="dashboard-link" href="Dashboard.aspx" class="list-group-item list-group-item-action" style="display: flex; margin-top: 25px; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="dashboard-link" href="/ViewPage/Dashboard.aspx" class="list-group-item list-group-item-action" style="display: flex; margin-top: 25px; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-toilet text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Dashboard</span>
                 </a>
-                <a id="usage-monitor-link" href="Usagemonitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="usage-monitor-link" href="/ViewPage/Usagemonitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-chart-line text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Usage Monitor</span>
                 </a>
-                <a id="resources-link" href="Resources.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="resources-link" href="/ViewPage/Resources.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-chart-column text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Resources</span>
                 </a>
-                <a id="schedule-link" href="Schedule.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="schedule-link" href="/ViewPage/Schedule.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-calendar-days text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Schedule</span>
                 </a>
-                <a id="janitor-link" href="Janitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="janitor-link" href="/ViewPage/Janitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-user text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Janitor</span>
                 </a>
-                <a id="settings-link" href="Settings.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="settings-link" href="/ViewPage/Settings.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-gear text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Settings</span>
                 </a>

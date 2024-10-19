@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Smart_RestRoom
+namespace Smart_RestRoom.ViewPage
 {
     public partial class Schedule : System.Web.UI.Page
     {

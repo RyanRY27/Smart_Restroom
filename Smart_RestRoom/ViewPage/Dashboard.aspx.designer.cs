@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Smart_RestRoom
+namespace Smart_RestRoom.ViewPage
 {
 
 
-    public partial class Settings
+    public partial class Dashboard
     {
     }
 }

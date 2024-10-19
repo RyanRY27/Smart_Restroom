@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Smart_RestRoom
+namespace Smart_RestRoom.ViewPage
 {
 
 

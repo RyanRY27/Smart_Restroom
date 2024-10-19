@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Smart_RestRoom
+namespace Smart_RestRoom.ViewPage
 {
 
 
-    public partial class WebForm2
+    public partial class Janitor
     {
     }
 }
