@@ -116,9 +116,35 @@
                         <!-- First chart -->
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-                                <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
-                                    <div class="container mt-4" style="height: 100%; max-height: 370px;">
+                                <div class="card-body" style="height: 560px; position: relative; overflow: hidden;">
+                                    <div class="container mt-3" style="height: 100%; max-height: 380px;">
                                         <h3 style="font-weight: bold;">Usage Chart</h3>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="d-flex">
+                                                <a href="#" class="chart-link me-2 active">Today</a>
+                                                <a href="#" class="chart-link me-2">Yesterday</a>
+                                                <a href="#" class="chart-link me-2">Weekly</a>
+                                                <a href="#" class="chart-link">Monthly</a>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-flex flex-column me-2 text-start">
+                                                    <div>
+                                                        <label for="fromDate" class="d-block">From:</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" id="fromDate" class="form-control" style="max-width: 135px; border-radius: 10px; background-color: #EFEFEF; border-color: #D7D7D7;">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column text-start">
+                                                    <div>
+                                                        <label for="toDate" class="d-block">To:</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" id="toDate" class="form-control" style="max-width: 135px; border-radius: 10px; background-color: #EFEFEF; border-color: #D7D7D7">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <canvas id="usagechart" style="max-width: 100%; max-height: 100%;"></canvas>
                                     </div>
                                     <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
@@ -134,13 +160,38 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Second chart -->
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-                                <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
-                                    <div class="container mt-4" style="height: 100%; max-height: 370px;">
+                                <div class="card-body" style="height: 560px; position: relative; overflow: hidden;">
+                                    <div class="container mt-3" style="height: 100%; max-height: 380px;">
                                         <h3 style="font-weight: bold;">Cubicle Usage Chart</h3>
+                                        <div class="d-flex justify-content-between align-items-center mb-3 mt-0 ">
+                                            <div class="d-flex">
+                                                <a href="#" class="chart-link me-2 active">Today</a>
+                                                <a href="#" class="chart-link me-2">Yesterday</a>
+                                                <a href="#" class="chart-link me-2">Weekly</a>
+                                                <a href="#" class="chart-link">Monthly</a>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-flex flex-column me-2 text-start">
+                                                    <div>
+                                                        <label for="fromDate" class="d-block">From:</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" id="fromDate1" class="form-control" style="max-width: 135px; border-radius: 10px; background-color: #EFEFEF; border-color: #D7D7D7;">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column text-start">
+                                                    <div>
+                                                        <label for="toDate" class="d-block">To:</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" id="toDate1" class="form-control" style="max-width: 135px; border-radius: 10px; background-color: #EFEFEF; border-color: #D7D7D7">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <canvas id="cubicleusage" style="max-width: 100%; max-height: 100%;"></canvas>
                                     </div>
                                     <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
@@ -157,14 +208,16 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="row g-2 mt-1">
                         <!-- Third chart -->
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-                                <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
-                                    <div class="container mt-4" style="height: 100%; max-height: 370px;">
+                                <div class="card-body" style="height: 550px; position: relative; overflow: hidden;">
+                                    <div class="container mt-4" style="height: 100%; max-height: 380px;">
                                         <h3 style="font-weight: bold;">AI Usage Prediction</h3>
-                                        <canvas id="aiusagechart" style="max-width: 100%; max-height: 100%;"></canvas>
+                                        <canvas id="aiusagechart" style="max-width: 100%; max-height: 100%; margin-top: 50px"></canvas>
                                     </div>
                                     <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
                                         <button class="btn" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
@@ -183,10 +236,10 @@
                         <!-- Fourth chart -->
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-                                <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
-                                    <div class="container mt-4" style="height: 100%; max-height: 370px;">
+                                <div class="card-body" style="height: 550px; position: relative; overflow: hidden;">
+                                    <div class="container mt-4" style="height: 100%; max-height: 380px;">
                                         <h3 style="font-weight: bold;">AI Cubicle Usage Prediction</h3>
-                                        <canvas id="aicubicleusage" style="max-width: 100%; max-height: 100%;"></canvas>
+                                        <canvas id="aicubicleusage" style="max-width: 100%; max-height: 100%; margin-top: 50px"></canvas>
                                     </div>
                                     <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
                                         <button class="btn" type="button" id="dropdownMenuButton11" data-bs-toggle="dropdown" aria-expanded="false">
@@ -208,7 +261,7 @@
                         <div class="col-12">
                             <div class="card" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                                 <div class="card-body">
-                                    <h3 class="card-title" style="font-weight: bold;">Usage Report</h3>
+                                    <h3 class="card-title mt-3" style="font-weight: bold;">Usage Report</h3>
                                     <div class="table-responsive">
                                         <table id="cubicleUsageTable" class="display" style="width: 100%; text-align: left;">
                                             <thead>
@@ -673,6 +726,44 @@
                 return new bootstrap.Tooltip(tooltipTriggerEl);
             });
         });
+
+
+        //chart button
+        document.addEventListener('DOMContentLoaded', () => {
+            const chartContainers = document.querySelectorAll('.card');
+
+            chartContainers.forEach(container => {
+                const links = container.querySelectorAll('.chart-link');
+
+                links.forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault();
+
+                        links.forEach(lnk => {
+                            lnk.classList.remove('active');
+                            lnk.style.backgroundColor = '';
+                        });
+
+                        link.classList.add('active');
+                        link.style.backgroundColor = '#D7D7D7';
+                    });
+
+                    link.addEventListener('mouseover', () => {
+                        if (!link.classList.contains('active')) {
+                            link.style.backgroundColor = '#D1D9FF';
+                        }
+                    });
+
+                    link.addEventListener('mouseout', () => {
+                        if (!link.classList.contains('active')) {
+                            link.style.backgroundColor = '';
+                        }
+                    });
+                });
+            });
+        });
+
+
 
 
 

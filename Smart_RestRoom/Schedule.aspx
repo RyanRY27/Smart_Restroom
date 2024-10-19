@@ -13,8 +13,7 @@
                                 <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold; height: 120px; position: relative;">
                                     <div class="card-title" id="user">
                                         Next Cleaning Schedule:
-                
-                 <span class="badge rounded-pill text-bg-warning" style="font-size: 20px; color: white !important">03:00 PM</span>
+                                        <span class="badge rounded-pill text-bg-warning" style="font-size: 20px; color: white !important">03:00 PM</span>
                                     </div>
 
                                 </div>
@@ -27,11 +26,11 @@
                                 <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold; height: 120px; position: relative;">
                                     <div class="card-title">
                                         RestRoom Status:
-                 <i class="bi bi-info-circle" style="font-size: 23px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
-                     title="&lt;strong&gt;Status:&lt;/strong&gt;&lt;br&gt;
-                    &lt;strong&gt;Clean:&lt;/strong&gt; The restroom is spotless and well-maintained.&lt;br&gt;
-                    &lt;strong&gt;Moderate:&lt;/strong&gt; Minor dirt or stains, mild odors, and some supplies are running low.&lt;br&gt;
-                    &lt;strong&gt;Dirty:&lt;/strong&gt; The restroom needs immediate attention and supplies are empty."></i>
+                                         <i class="bi bi-info-circle" style="font-size: 23px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
+                                             title="&lt;strong&gt;Status:&lt;/strong&gt;&lt;br&gt;
+                                            &lt;strong&gt;Clean:&lt;/strong&gt; The restroom is spotless and well-maintained.&lt;br&gt;
+                                            &lt;strong&gt;Moderate:&lt;/strong&gt; Minor dirt or stains, mild odors, and some supplies are running low.&lt;br&gt;
+                                            &lt;strong&gt;Dirty:&lt;/strong&gt; The restroom needs immediate attention and supplies are empty."></i>
                                         <span class="badge rounded-pill text-bg-danger" style="font-size: 20px; color: white">Dirty</span>
                                     </div>
                                 </div>
@@ -88,9 +87,34 @@
                         <!-- First chart -->
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-                                <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
-                                    <div class="container mt-4" style="height: 100%; max-height: 370px;">
+                                <div class="card-body" style="height: 560px; position: relative; overflow: hidden;">
+                                    <div class="container mt-3" style="height: 100%; max-height: 380px;">
                                         <h3 style="font-weight: bold;">Cleaning Chart</h3>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="d-flex">
+                                                <a href="#" class="chart-link me-2 active">This Week</a>
+                                                <a href="#" class="chart-link me-2">Last Week</a>
+                                                <a href="#" class="chart-link me-2">Monthly</a>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-flex flex-column me-2 text-start">
+                                                    <div>
+                                                        <label for="fromDate" class="d-block">From:</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" id="fromDate" class="form-control" style="max-width: 135px; border-radius: 10px; background-color: #EFEFEF; border-color: #D7D7D7;">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column text-start">
+                                                    <div>
+                                                        <label for="toDate" class="d-block">To:</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" id="toDate" class="form-control" style="max-width: 135px; border-radius: 10px; background-color: #EFEFEF; border-color: #D7D7D7">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <canvas id="cleaningchart" style="max-width: 100%; max-height: 100%;"></canvas>
                                     </div>
                                     <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
@@ -109,9 +133,35 @@
                         <!-- Second chart -->
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-                                <div class="card-body" style="height: 500px; position: relative; overflow: hidden;">
-                                    <div class="container mt-4" style="height: 100%; max-height: 370px;">
+                                <div class="card-body" style="height: 560px; position: relative; overflow: hidden;">
+                                    <div class="container mt-3" style="height: 100%; max-height: 380px;">
                                         <h3 style="font-weight: bold;">Janitor Cleaning Hours</h3>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="d-flex">
+                                                <a href="#" class="chart-link me-2 active">Today</a>
+                                                <a href="#" class="chart-link me-2">Yesterday</a>
+                                                <a href="#" class="chart-link me-2">Weekly</a>
+                                                <a href="#" class="chart-link">Monthly</a>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-flex flex-column me-2 text-start">
+                                                    <div>
+                                                        <label for="fromDate" class="d-block">From:</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" id="fromDate1" class="form-control" style="max-width: 135px; border-radius: 10px; background-color: #EFEFEF; border-color: #D7D7D7;">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column text-start">
+                                                    <div>
+                                                        <label for="toDate" class="d-block">To:</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="date" id="toDate1" class="form-control" style="max-width: 135px; border-radius: 10px; background-color: #EFEFEF; border-color: #D7D7D7">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <canvas id="cleaningHours" style="max-width: 100%; max-height: 100%;"></canvas>
                                     </div>
                                     <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
@@ -210,7 +260,7 @@
                                 <div class="card-body" style="padding: 20px;">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h3 class="card-title mt-3 mb-3" style="font-weight: bold;">Janitor Schedule Report</h3>
-                                        <button type="button" class="btn float-end" style="border-radius: 10px; background-color: #D1D9FF; color: #1D1D1D; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding-left: 15px; padding-right: 15px;">Add Schedule</button>
+                                        <button type="button" class="btn float-end" style="border-radius: 10px; background-color: #D1D9FF; color: #1D1D1D; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding-left: 15px; padding-right: 15px; border: none">Add Schedule</button>
                                     </div>
                                     <div class="table-responsive">
                                         <table id="janitorschedule" class="display" style="width: 100%; text-align: left; padding: 10px">
@@ -499,6 +549,42 @@
                 return new bootstrap.Tooltip(tooltipTriggerEl);
             });
         });
+
+        //chart button
+        document.addEventListener('DOMContentLoaded', () => {
+            const chartContainers = document.querySelectorAll('.card');
+
+            chartContainers.forEach(container => {
+                const links = container.querySelectorAll('.chart-link');
+
+                links.forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault();
+
+                        links.forEach(lnk => {
+                            lnk.classList.remove('active');
+                            lnk.style.backgroundColor = '';
+                        });
+
+                        link.classList.add('active');
+                        link.style.backgroundColor = '#D7D7D7';
+                    });
+
+                    link.addEventListener('mouseover', () => {
+                        if (!link.classList.contains('active')) {
+                            link.style.backgroundColor = '#D1D9FF';
+                        }
+                    });
+
+                    link.addEventListener('mouseout', () => {
+                        if (!link.classList.contains('active')) {
+                            link.style.backgroundColor = '';
+                        }
+                    });
+                });
+            });
+        });
+
     </script>
 </asp:Content>
 

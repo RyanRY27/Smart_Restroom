@@ -108,12 +108,34 @@
         #content-area.collapsed {
             margin-left: 70px;
         }
-          .tooltip-inner {
-    text-align: left !important; 
-}
 
-  
+        .tooltip-inner {
+            text-align: left !important;
+        }
 
+        .chart-link {
+            display: inline-block;
+            padding: 8px 12px;
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: transparent;
+        }
+
+            .chart-link.active {
+                background-color: #D7D7D7;
+                color: #1D1D1D;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .chart-link:hover {
+                background-color: #D1D9FF;
+                color: #1D1D1D;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+            }
     </style>
 
     <script>
