@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Login.aspx" />
     <Content Include="Resources\Bootsrap\css\bootstrap.min.css" />
     <Content Include="Resources\Bootsrap\js\bootstrap.min.js" />
     <Content Include="Resources\Bootsrap\js\popper.min.js" />
     <Content Include="Resources\CSS\all.css" />
+    <Content Include="Resources\CSS\login.css" />
     <Content Include="Resources\Datatables\css\dataTables.dataTables.min.css" />
     <Content Include="Resources\Datatables\js\dataTables.min.js" />
     <Content Include="Resources\Fontawesome\css\all.css" />
@@ -2160,6 +2162,7 @@
     <Content Include="Resources\Fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="Resources\Fontawesome\svgs\solid\z.svg" />
     <Content Include="Resources\JS\janitor.js" />
+    <Content Include="Resources\JS\login.js" />
     <Content Include="Resources\JS\schedule.js" />
     <Content Include="Resources\JS\sitemaster.js" />
     <Content Include="Resources\JS\usagemonitor.js" />
@@ -2173,6 +2176,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

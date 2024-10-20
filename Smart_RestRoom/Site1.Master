@@ -4,7 +4,7 @@
 <html>
 <head runat="server">
     <title></title>
-    
+
     <link href="/Resources/Bootsrap/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
@@ -108,39 +108,40 @@
                                 <a href="#" class="btn btn-primary w-100 mb-2" style="background-color: #6C63FF; border: none; border-radius: 8px; padding: 10px 0; font-size: 16px; text-transform: uppercase;">View Profile</a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-danger w-100" style="background-color: #FF4B4B; border: none; border-radius: 8px; padding: 10px 0; font-size: 16px; text-transform: uppercase;">
-                                    <i class="fa fa-sign-out-alt"></i>Log Out
-                                </a>
+                                <asp:LinkButton ID="btnLogout" runat="server" CssClass="btn btn-danger w-100"
+                                    OnClick="Logout_Click" Style="background-color: #FF4B4B; border-radius: 8px;">
+                                    <i class="fa fa-sign-out-alt"></i> Log Out
+                                </asp:LinkButton>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
-       
+
         <div id="sidebar" class="sidebar position-fixed vh-100" style="position: fixed; top: 80px; background-color: #EFEFEF; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 250px; transition: width 0.3s ease; padding-top: 20px; border-right: 4px solid #BFBFBF;">
             <div class="list-group">
-                <a id="dashboard-link" href="/ViewPage/Dashboard.aspx" class="list-group-item list-group-item-action" style="display: flex; margin-top: 25px; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="dashboardLink" runat="server" href="/ViewPage/Dashboard.aspx" class="list-group-item list-group-item-action" style="display: flex; margin-top: 25px; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-toilet text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Dashboard</span>
                 </a>
-                <a id="usage-monitor-link" href="/ViewPage/Usagemonitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="usageMonitorLink" runat="server" href="/ViewPage/Usagemonitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-chart-line text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Usage Monitor</span>
                 </a>
-                <a id="resources-link" href="/ViewPage/Resources.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="resourcesLink" runat="server" href="/ViewPage/Resources.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-chart-column text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Resources</span>
                 </a>
-                <a id="schedule-link" href="/ViewPage/Schedule.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="scheduleLink" runat="server" href="/ViewPage/Schedule.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-calendar-days text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Schedule</span>
                 </a>
-                <a id="janitor-link" href="/ViewPage/Janitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="janitorLink" runat="server" href="/ViewPage/Janitor.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-user text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Janitor</span>
                 </a>
-                <a id="settings-link" href="/ViewPage/Settings.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+                <a id="settingsLink" runat="server" href="/ViewPage/Settings.aspx" class="list-group-item list-group-item-action" style="display: flex; align-items: center; height: 60px; font-size: 20px; font-family: Arial, Helvetica, sans-serif">
                     <i class="fa-solid fa-gear text-center" style="min-width: 30px;"></i>
                     <span class="item-text ms-2" style="opacity: 1; white-space: nowrap; overflow: hidden; transition: opacity 0.3s ease, width 0.3s ease;">Settings</span>
                 </a>

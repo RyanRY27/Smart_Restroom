@@ -38,31 +38,57 @@ function restoreSidebarState() {
         text.style.width = sidebarState === 'collapsed' ? '0' : 'auto';
     }
 }
-document.addEventListener('DOMContentLoaded', restoreSidebarState);
+document.addEventListener('DOMContentLoaded', function () {
 
-$(document).ready(function () {
+    $(document).ready(function () {
 
-    const activeLink = localStorage.getItem('activeLink');
-    if (activeLink) {
-        $('.list-group-item').removeClass('active');
-        $('#' + activeLink).addClass('active');
-    }
+       
+        const currentPath = window.location.pathname;
+        console.log('Current Path:', currentPath);  
+    
+        function setActiveLinkByUrl(urlPath) {
+            let foundMatch = false; 
+            $('.list-group-item').each(function () {
+                const linkHref = $(this).attr('href');
+                
+                if (linkHref && urlPath.includes(linkHref)) {
+                    $('.list-group-item').removeClass('active'); 
+                    $(this).addClass('active');                  
+                    localStorage.setItem('activeLink', this.id);  
+                    foundMatch = true;
+                    return false; 
+                }
+            });
 
+            return foundMatch;
+        }
 
-    $('.list-group-item').click(function () {
+        function setActiveLinkById(linkId) {
+            $('.list-group-item').removeClass('active');   
+            $('#' + linkId).addClass('active');            
+            localStorage.setItem('activeLink', linkId);    
+        }
 
-        $('.list-group-item').removeClass('active');
+        
+        const urlMatched = setActiveLinkByUrl(currentPath);
 
+       
+        if (!urlMatched) {
+            const savedLink = localStorage.getItem('activeLink');
+            if (savedLink) {
+                setActiveLinkById(savedLink);
+            }
+        }
 
-        $(this).addClass('active');
+        $('.list-group-item').click(function () {
+            $('.list-group-item').removeClass('active'); 
+            $(this).addClass('active');                 
+            localStorage.setItem('activeLink', this.id); 
+        });
 
-
-        localStorage.setItem('activeLink', this.id);
-
-
-        console.log($(this).text() + " is active now");
     });
 });
+
 
 $(document).ready(function () {
     $('.dropdown-item').click(function (e) {

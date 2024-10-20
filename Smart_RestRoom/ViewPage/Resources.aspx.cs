@@ -11,7 +11,22 @@ namespace Smart_RestRoom.ViewPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+      
+                if (Session["UserUsername"] != null)
+                {
+            
+                    System.Diagnostics.Debug.WriteLine("Session UserUsername is: " + Session["UserUsername"]);
+                }
+                else
+                {
+                 
+                    System.Diagnostics.Debug.WriteLine("No session found. Redirecting to Login.aspx.");
+                    Response.Redirect("~/Login.aspx");
+                }
+            }
         }
+
     }
 }

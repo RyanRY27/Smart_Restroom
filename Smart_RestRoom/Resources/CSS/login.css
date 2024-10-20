@@ -1,0 +1,55 @@
+﻿#rememberMeCheckBox:checked {
+    background-color: white;
+    border-color: #007bff;
+}
+
+    #rememberMeCheckBox:checked::before {
+        content: '✔';
+        font-size: 14px;
+        color: #007bff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+#rememberMeCheckBox:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+#rememberMeCheckBox:active {
+    outline: none;
+    box-shadow: none;
+}body {
+}
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+    .password-container input {
+        padding-right: 40px; /* Space for the eye icon */
+    }
+
+    .password-container .toggle-password {
+        position: absolute;
+        right: 15px; /* Adjust the position to fit inside the input */
+        top: 70%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #6c757d; /* Match the typical placeholder color */
+        opacity: 0.6; /* Make it less prominent, like a placeholder */
+        background: none;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .password-container .toggle-password:hover {
+            opacity: 1; /* Make it more visible on hover */
+        }
