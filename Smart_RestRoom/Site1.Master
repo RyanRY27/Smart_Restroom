@@ -21,7 +21,7 @@
     <script src="/Resources/JS/janitor.js"></script>
     <script src="/Resources/JS/schedule.js"></script>
     <script src="/Resources/JS/usagemonitor.js"></script>
-
+    <script src="/Resources/JS/Resources.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
 </head>

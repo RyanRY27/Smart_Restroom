@@ -2163,6 +2163,7 @@
     <Content Include="Resources\Fontawesome\svgs\solid\z.svg" />
     <Content Include="Resources\JS\janitor.js" />
     <Content Include="Resources\JS\login.js" />
+    <Content Include="Resources\JS\Resources.js" />
     <Content Include="Resources\JS\schedule.js" />
     <Content Include="Resources\JS\sitemaster.js" />
     <Content Include="Resources\JS\usagemonitor.js" />

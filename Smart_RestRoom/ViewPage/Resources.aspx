@@ -13,13 +13,13 @@
                         <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; position: relative; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold; height: 120px; position: relative;">
                                 <div class="card-title">
-                                    RestRoom Status:
+                                    Next Resource Refill:
                                     <i class="bi bi-info-circle" style="font-size: 23px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                                         title="&lt;strong&gt;Status:&lt;/strong&gt;&lt;br&gt;
                                        &lt;strong&gt;Clean:&lt;/strong&gt; The restroom is spotless and well-maintained.&lt;br&gt;
                                        &lt;strong&gt;Moderate:&lt;/strong&gt; Minor dirt or stains, mild odors, and some supplies are running low.&lt;br&gt;
                                        &lt;strong&gt;Dirty:&lt;/strong&gt; The restroom needs immediate attention and supplies are empty."></i>
-                                    <span class="badge rounded-pill text-bg-danger" style="font-size: 20px; color: white">Dirty</span>
+                                    <span class="badge rounded-pill text-bg-danger" style="font-size: 20px; color: white">Friday</span>
                                 </div>
                             </div>
                         </div>
@@ -29,9 +29,9 @@
                         <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; position: relative; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold; height: 120px; position: relative;">
                                 <div class="card-title" id="user">
-                                    Today Total Users:
+                                    Cleaning Supply Status:
                                    
-                                    <span class="badge rounded-pill text-bg-warning" style="font-size: 20px; color: white !important">100</span>
+                                    <span class="badge rounded-pill text-bg-danger" style="font-size: 20px; color: white !important">Low</span>
                                 </div>
                                 <div class="dropdown" style="position: absolute; top: 0px; right: 10px; z-index: 2;">
                                     <button class="btn" type="button" id="dropdownMenuButtonUsers" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,8 +51,8 @@
                         <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; position: relative; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold; height: 120px; position: relative;">
                                 <div class="card-title" id="usedcubicle">
-                                    Most Used Cubicle Today:
-                                    <span class="badge rounded-pill text-bg-danger" style="font-size: 20px; color: white">Cubicle 5</span>
+                                    Last Resource Refill: 
+                                    <span class="badge rounded-pill text-bg-danger" style="font-size: 20px; color: white">Monday</span>
                                 </div>
                                 <div class="dropdown" style="position: absolute; top: 0px; right: 10px; z-index: 2;">
                                     <button class="btn" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,8 +74,8 @@
                         <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold">
                                 <div class="card-title">
-                                    Average Time Per User:
-                                    <span class="badge rounded-pill text-bg-info" style="font-size: 20px; color: white !important">5 mins</span>
+                                    Average Resource Usage:
+                                    <span class="badge rounded-pill text-bg-info" style="font-size: 20px; color: white !important">20 ml</span>
                                 </div>
                             </div>
                         </div>
@@ -85,8 +85,8 @@
                         <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; position: relative; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold; height: 120px; position: relative;">
                                 <div class="card-title" id="cleaning">
-                                    Today Total Cleaning:
-                                    <span class="badge rounded-pill text-bg-info" style="font-size: 20px; color: white !important;">3</span>
+                                    Supply Usage Priority
+                                    <span class="badge rounded-pill text-bg-info" style="font-size: 20px; color: white !important;">Bleach</span>
                                 </div>
                                 <div class="dropdown" style="position: absolute; top: 0px; right: 10px; z-index: 2;">
                                     <button class="btn" type="button" id="dropdownMenuButtonCleaning" data-bs-toggle="dropdown" aria-expanded="false">
@@ -106,8 +106,8 @@
                         <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div class="card-body" style="align-content: center; font-size: 30px; font-weight: bold">
                                 <div class="card-title">
-                                    Content 4:
-                                    <span class="badge rounded-pill text-bg-primary" style="font-size: 20px">Details here</span>
+                                    Last Janitor Assigned:
+                                    <span class="badge rounded-pill text-bg-primary" style="font-size: 20px">Janitor 1</span>
                                 </div>
                             </div>
                         </div>
@@ -146,16 +146,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="usagechart" style="max-width: 100%; max-height: 100%;"></canvas>
+                                    <canvas id="resourceUsage" style="max-width: 100%; max-height: 100%;"></canvas>
                                 </div>
                                 <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
                                     <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="fa-solid fa-ellipsis"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                        <li><a class="dropdown-item" href="#" data-value="Line Chart1">Line Chart</a></li>
-                                        <li><a class="dropdown-item" href="#" data-value="Bar Chart1">Bar Chart</a></li>
-                                        <li><a class="dropdown-item" href="#" data-value="Donut Chart1">Donut Chart</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Line Chart">Line Chart</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Bar Chart">Bar Chart</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Donut Chart">Donut Chart</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -287,4 +287,6 @@
         </div>
     </div>
 </div>
+
+    
 </asp:Content>
