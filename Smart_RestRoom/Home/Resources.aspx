@@ -119,7 +119,7 @@
                         <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div class="card-body" style="height: 560px; position: relative; overflow: hidden;">
                                 <div class="container mt-3" style="height: 100%; max-height: 380px;">
-                                    <h3 style="font-weight: bold;">Usage Chart</h3>
+                                    <h3 style="font-weight: bold;">Resources Usage Chart</h3>
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <div class="d-flex">
                                             <a href="#" class="chart-link me-2 active">Today</a>
@@ -166,7 +166,7 @@
                         <div class="card h-100" style="border-radius: 20px; background-color: #EFEFEF; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div class="card-body" style="height: 560px; position: relative; overflow: hidden;">
                                 <div class="container mt-3" style="height: 100%; max-height: 380px;">
-                                    <h3 style="font-weight: bold;">Cubicle Usage Chart</h3>
+                                    <h3 style="font-weight: bold;">Janitor Resource Usage</h3>
                                     <div class="d-flex justify-content-between align-items-center mb-3 mt-0 ">
                                         <div class="d-flex">
                                             <a href="#" class="chart-link me-2 active">Today</a>
@@ -193,16 +193,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas id="cubicleusage" style="max-width: 100%; max-height: 100%;"></canvas>
+                                    <canvas id="janitorusage" style="max-width: 100%; max-height: 100%;"></canvas>
                                 </div>
                                 <div class="dropdown" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
                                     <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="fa-solid fa-ellipsis"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1" style="left: 0; right: auto; background-color: #EFEFEF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 150px; max-width: 100%; white-space: normal; overflow: hidden;">
-                                        <li><a class="dropdown-item" href="#" data-value="Line Chart">Line Chart</a></li>
-                                        <li><a class="dropdown-item" href="#" data-value="Bar Chart">Bar Chart</a></li>
-                                        <li><a class="dropdown-item" href="#" data-value="Donut Chart">Donut Chart</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Line Chart1">Line Chart</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="Bar Chart1">Bar Chart</a></li>
                                     </ul>
                                 </div>
                             </div>

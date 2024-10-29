@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Smart_RestRoom.Login" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Smart_RestRoom.Login" %>
 
 <!DOCTYPE html>
 
@@ -54,13 +55,7 @@
                             <i class="fa fa-eye"></i>
                         </span>
                     </div>
-
-                    <div class="form-group mb-3 d-flex align-items-center" style="width: 100%;">
-                        <input type="checkbox" class="form-check-input" id="rememberMeCheckBox"
-                            style="width: 20px; height: 20px; appearance: none; background-color: white; border: 2px solid #ccc; border-radius: 4px; display: inline-block; position: relative; outline: none; margin-right: 10px; vertical-align: middle; cursor: pointer;" />
-                        <label class="form-check-label" for="rememberMeCheckBox" style="font-size: 18px; margin-bottom: 0;">Remember Me</label>
-                    </div>
-                    <div class="form-group" style="width: 100%;">
+                    <div class="form-group mt-4" style="width: 100%;">
                         <asp:Button ID="btnLogin" runat="server" CssClass="btn w-100" Text="Login" OnClick="BtnLogin_Click"
                             Style="border-radius: 10px; background-color: #D1D9FF; color: #1D1D1D; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 100%;" />
                     </div>

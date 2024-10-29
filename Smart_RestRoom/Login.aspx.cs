@@ -59,7 +59,7 @@ namespace Smart_RestRoom
                 else
                 {
                    
-                    Response.Redirect("~/ViewPage/Dashboard.aspx");
+                    Response.Redirect("~/Home/Dashboard.aspx");
                 }
             }
             else

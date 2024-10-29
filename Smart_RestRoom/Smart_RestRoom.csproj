@@ -2167,12 +2167,12 @@
     <Content Include="Resources\JS\schedule.js" />
     <Content Include="Resources\JS\sitemaster.js" />
     <Content Include="Resources\JS\usagemonitor.js" />
-    <Content Include="ViewPage\Dashboard.aspx" />
-    <Content Include="ViewPage\Janitor.aspx" />
-    <Content Include="ViewPage\Resources.aspx" />
-    <Content Include="ViewPage\Schedule.aspx" />
-    <Content Include="ViewPage\Settings.aspx" />
-    <Content Include="ViewPage\Usagemonitor.aspx" />
+    <Content Include="Home\Dashboard.aspx" />
+    <Content Include="Home\Janitor.aspx" />
+    <Content Include="Home\Resources.aspx" />
+    <Content Include="Home\Schedule.aspx" />
+    <Content Include="Home\Settings.aspx" />
+    <Content Include="Home\Usagemonitor.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -2192,46 +2192,46 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="ViewPage\Dashboard.aspx.cs">
+    <Compile Include="Home\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPage\Dashboard.aspx.designer.cs">
+    <Compile Include="Home\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPage\Janitor.aspx.cs">
+    <Compile Include="Home\Janitor.aspx.cs">
       <DependentUpon>Janitor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPage\Janitor.aspx.designer.cs">
+    <Compile Include="Home\Janitor.aspx.designer.cs">
       <DependentUpon>Janitor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPage\Resources.aspx.cs">
+    <Compile Include="Home\Resources.aspx.cs">
       <DependentUpon>Resources.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPage\Resources.aspx.designer.cs">
+    <Compile Include="Home\Resources.aspx.designer.cs">
       <DependentUpon>Resources.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPage\Schedule.aspx.cs">
+    <Compile Include="Home\Schedule.aspx.cs">
       <DependentUpon>Schedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPage\Schedule.aspx.designer.cs">
+    <Compile Include="Home\Schedule.aspx.designer.cs">
       <DependentUpon>Schedule.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPage\Settings.aspx.cs">
+    <Compile Include="Home\Settings.aspx.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPage\Settings.aspx.designer.cs">
+    <Compile Include="Home\Settings.aspx.designer.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPage\Usagemonitor.aspx.cs">
+    <Compile Include="Home\Usagemonitor.aspx.cs">
       <DependentUpon>Usagemonitor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPage\Usagemonitor.aspx.designer.cs">
+    <Compile Include="Home\Usagemonitor.aspx.designer.cs">
       <DependentUpon>Usagemonitor.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
