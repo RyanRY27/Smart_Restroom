@@ -42,15 +42,6 @@ namespace Smart_RestRoom
         protected global::System.Web.UI.WebControls.LinkButton btnLogout;
 
         /// <summary>
-        /// dashboardLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor dashboardLink;
-
-        /// <summary>
         /// usageMonitorLink control.
         /// </summary>
         /// <remarks>

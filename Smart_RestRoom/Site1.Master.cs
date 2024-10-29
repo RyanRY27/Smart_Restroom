@@ -40,7 +40,7 @@ namespace Smart_RestRoom
        
             FormsAuthentication.SignOut();
 
-            Response.Redirect("~/Login.aspx");
+            Response.Redirect("~/Dashboard.aspx");
         }
 
 

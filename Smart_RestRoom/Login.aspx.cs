@@ -20,7 +20,7 @@ namespace Smart_RestRoom
                 {
                    
                     FormsAuthentication.SignOut();
-                    Response.Redirect("~/Login.aspx", true);
+                    Response.Redirect("~/Dashboard.aspx", true);
                     return;
                 }
 
@@ -59,7 +59,7 @@ namespace Smart_RestRoom
                 else
                 {
                    
-                    Response.Redirect("~/Home/Dashboard.aspx");
+                    Response.Redirect("~/Home/Usagemonitor.aspx");
                 }
             }
             else

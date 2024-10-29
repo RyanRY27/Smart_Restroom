@@ -2167,7 +2167,6 @@
     <Content Include="Resources\JS\schedule.js" />
     <Content Include="Resources\JS\sitemaster.js" />
     <Content Include="Resources\JS\usagemonitor.js" />
-    <Content Include="Home\Dashboard.aspx" />
     <Content Include="Home\Janitor.aspx" />
     <Content Include="Home\Resources.aspx" />
     <Content Include="Home\Schedule.aspx" />
@@ -2191,13 +2190,6 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Dashboard.aspx.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Dashboard.aspx.designer.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\Janitor.aspx.cs">
       <DependentUpon>Janitor.aspx</DependentUpon>
